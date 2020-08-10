@@ -54,4 +54,30 @@ const Envelope = () => {
   );
 };
 
-ReactDOM.render(<Envelope />, document.querySelector("#root"));
+const CreditCard = ({ cardInfo }) => {
+  return (
+    <div className="credit-card">
+      <div className="card">
+        <h1>Big Bank,Inc.</h1>
+      </div>
+
+      <div className="card-info">
+        <p>1234 4567 7864 1239</p>
+        <div>
+          <span>Valid Thru</span>
+          <span>08/20</span>
+          <h2>Chloe's Card</h2>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ExpiryDate = ({ date }) => {
+  return (
+    <div>
+      <h1>valid trhu {date}</h1>
+    </div>
+  );
+};
+ReactDOM.render(<CreditCard />, document.querySelector("#root"));

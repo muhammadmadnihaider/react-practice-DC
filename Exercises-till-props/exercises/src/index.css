@@ -5,3 +5,23 @@
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.6;
 }
+
+.image {
+  border: 5px solid red;
+  height: 100px;
+}
+.envelope {
+  background: whitesmoke;
+  display: flex;
+  border: 12px solid lightgoldenrodyellow;
+  flex-flow: column;
+  height: 50vh;
+}
+.first {
+  display: flex;
+  justify-content: space-between;
+}
+.second {
+  display: flex;
+  justify-content: center;
+}

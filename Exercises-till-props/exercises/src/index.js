@@ -23,11 +23,35 @@ const AddressLabel = ({ person }) => {
       {street}
       <br />
       {state}, {postal}
+      <br />
     </div>
   );
 };
 
-ReactDOM.render(
-  <AddressLabel person={person} />,
-  document.querySelector("#root")
-);
+const Stamp = () => {
+  return (
+    <img
+      className="image"
+      src={
+        "https://static.vecteezy.com/system/resources/thumbnails/000/187/311/small/postcard_from_alaska1_RF_RMPL-01.jpg"
+      }
+      alt="stamp"
+    />
+  );
+};
+
+const Envelope = () => {
+  return (
+    <div className="envelope">
+      <div className="first">
+        <AddressLabel person={person} />
+        <Stamp />
+      </div>
+      <div className="second">
+        <AddressLabel person={person} />
+      </div>
+    </div>
+  );
+};
+
+ReactDOM.render(<Envelope />, document.querySelector("#root"));

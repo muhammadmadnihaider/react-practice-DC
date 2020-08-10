@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Poster from "./components/Poster";
 import "./index.css";
 
 const person = {
@@ -10,6 +11,13 @@ const person = {
     state: "California",
     postal: "MA 02118",
   },
+};
+
+const poster = {
+  image:
+    "https://www.pngitem.com/pimgs/m/664-6644509_icon-react-js-logo-hd-png-download.png",
+  title: "React",
+  description: "we are going to learn react",
 };
 
 const AddressLabel = ({ person }) => {
@@ -80,4 +88,4 @@ const ExpiryDate = ({ date }) => {
     </div>
   );
 };
-ReactDOM.render(<CreditCard />, document.querySelector("#root"));
+ReactDOM.render(<Poster poster={poster} />, document.querySelector("#root"));

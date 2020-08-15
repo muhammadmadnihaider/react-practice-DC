@@ -1,0 +1,28 @@
+.bg-light {
+  background: #ff6600 !important;
+}
+.color {
+  background: #f6f6ef;
+}
+
+.text-color-li {
+  color: #9a9a9a;
+}
+.width {
+  width: 90% !important;
+}
+
+.nav-link {
+  color: black;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.nav-link:hover {
+  color: gray;
+  cursor: pointer;
+}
+.navbar-brand,
+.navbar-brand:hover {
+  color: black;
+  vertical-align: baseline;
+}

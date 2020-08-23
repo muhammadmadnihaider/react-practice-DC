@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import "./App.css";
 const App = () => {
-  const [bulb, setBulb] = useState(false);
+  const [numbers, setNumbers] = useState([]);
 
-  const onFlip = () => {
-    setBulb((bulb) => !bulb);
+  const addNumber = () => {
+    setNumbers((numbers) => [...numbers, Math.random() * 100]);
   };
 
   return (
-    <div className="light-body">
-      {bulb ? <h1 className="dark">dark</h1> : <h1 className="light">Light</h1>}
-      <button onClick={onFlip}>flip</button>
+    <div>
+      <ul>
+        {numbers.map((number) => (
+          <li>{Math.floor(number)}</li>
+        ))}
+      </ul>
+      <button onClick={addNumber}>Add number</button>
     </div>
   );
 };

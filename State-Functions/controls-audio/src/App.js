@@ -3,22 +3,56 @@ import logo from "./logo.svg";
 import "./App.css";
 
 const App = () => {
-  const [volume, setVolume] = useState(1);
-  const [treble, setTreble] = useState(1);
-  const [mid, setMid] = useState(3);
-  const [bass, setBass] = useState(5);
+  const [volume, setVolume] = useState(99);
+  const [treble, setTreble] = useState(99);
+  const [mid, setMid] = useState(99);
+  const [bass, setBass] = useState(99);
 
-  const incVolume = () => setVolume((volume) => volume + 1);
-  const decVolume = () => setVolume((volume) => volume - 1);
+  const incVolume = () =>
+    setVolume((volume) => {
+      if (volume == 0 || volume == 100) return volume;
+      return volume + 1;
+    });
+  const decVolume = () =>
+    setVolume((volume) => {
+      if (volume == 0 || volume == 100) return volume;
+      return volume - 1;
+    });
 
-  const incTreble = () => setTreble((treble) => treble + 1);
-  const decTreble = () => setTreble((treble) => treble - 1);
+  const incTreble = () =>
+    setTreble((treble) => {
+      if (treble == 0 || treble == 100) return treble;
+      return treble + 1;
+    });
+  const decTreble = () =>
+    setTreble((treble) => {
+      if (treble == 0 || treble == 100) return treble;
+      return treble - 1;
+    });
 
-  const incMid = () => setMid((mid) => mid + 1);
-  const decMid = () => setMid((mid) => mid - 1);
+  const incMid = () =>
+    setMid((mid) => {
+      if (mid == 0 || mid == 100) return mid;
+      return mid + 1;
+    });
+  const decMid = () =>
+    setMid((mid) => {
+      if (mid == 0 || mid == 100) return mid;
+      return mid - 1;
+    });
 
-  const incBass = () => setBass((bass) => bass + 1);
-  const decBass = () => setBass((bass) => bass - 1);
+  const incBass = () =>
+    setBass((bass) => {
+      if (bass == 0 || bass == 100) return bass;
+      return bass + 1;
+    });
+  const decBass = () =>
+    setBass((bass) => {
+      if (bass == 0 || bass == 100) return bass;
+      return bass - 1;
+    });
+
+  // const [audio,setAudio] = useState({volume:})
 
   return (
     <div className="container w-25 border border-primary">
